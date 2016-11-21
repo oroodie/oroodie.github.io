@@ -1,7 +1,3 @@
-/*
-Write your code in the attachEventListeners() function defintion, which starts on line 89.
- */
-
 (function() {
 
 	/**
@@ -21,8 +17,6 @@ Write your code in the attachEventListeners() function defintion, which starts o
 		//   keep inside Obj reference
 		_this.startSLIDE = function(e){
 
-			//console.log('startSLIDE', e);
-
 			e.preventDefault();
 
 			_this._sliding = false;
@@ -37,13 +31,13 @@ Write your code in the attachEventListeners() function defintion, which starts o
    				$(document).on('touchmove', _this.moveSLIDE)
    						   .on('touchend', _this.endSLIDE);
 			}
+
+			_this.addMovement( _this.getX(e) );
 		}
 
 
 		// Eevent Listeners callback
 		_this.moveSLIDE = function(e){
-
-			//console.log('moveSLIDE',e, _this.sliding, _this.getX(e));
 
 			if(_this._sliding) return;
 
@@ -55,6 +49,7 @@ Write your code in the attachEventListeners() function defintion, which starts o
 				_this.slide( toggle[0] );
 			}.bind(_this));
 		}
+
 
 		// Eevent Listeners callback
 		_this.endSLIDE = function(e){
@@ -74,13 +69,12 @@ Write your code in the attachEventListeners() function defintion, which starts o
 
 		};
 
+
 		// init
 		_this.init = function(){
 
 			var	toggleRect = toggle[0].getBoundingClientRect(),
 				lineRect = line[0].getBoundingClientRect();
-
-			//console.log(); //return;
 
 			_this._max = lineRect.width - toggleRect.width;
 			_this._half = this._max / 2;
@@ -91,6 +85,7 @@ Write your code in the attachEventListeners() function defintion, which starts o
 		}
 		_this.init();
 	}
+
 
 	ToggleTracker.prototype = {
 		_touches: [],
@@ -178,6 +173,7 @@ Write your code in the attachEventListeners() function defintion, which starts o
 			}
 		},
 	};
+
 
 	/*
 	Attaches all the event listeners when the page's content is ready.
