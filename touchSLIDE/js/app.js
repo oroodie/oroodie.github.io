@@ -3,14 +3,6 @@ Write your code in the attachEventListeners() function defintion, which starts o
  */
 
 (function() {
-	/*
-	The actual grey box your finger touches.
-	 */
-	var toggle = document.querySelector('.toggle');
-	/*
-	The line that the toggle slides over.
-	 */
-	var line = document.querySelector('.line');
 
 	/**
 	 * Keeps track of touches and determines where the toggle should be on the slider.
@@ -186,10 +178,6 @@ Write your code in the attachEventListeners() function defintion, which starts o
 			}
 		},
 	};
-
-
-
-
 
 	/*
 	Attaches all the event listeners when the page's content is ready.

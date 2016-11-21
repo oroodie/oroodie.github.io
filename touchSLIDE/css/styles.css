@@ -5,11 +5,14 @@ body {
  	user-select: none;
 }
 
+h3 {
+	width: 300px;
+	margin: 10px auto;
+}
+
 .slider-main {
 	width: 300px;
-	margin-top: 200px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 20px auto 80px auto;
 }
 
 .toggle {
