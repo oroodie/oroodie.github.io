@@ -1,0 +1,117 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <title>TITLE</title>
+     <meta name="description" content="DESCRIPTION">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="styles/main.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+
+     <!--[if lt IE 9]>
+       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+ </head>
+ <body>
+  <header class='header'>
+      <div class="content">
+          <h1 class="main-title">Checkout</h1>
+          <div class="progress-bar"></div>
+          </div>
+  </header>
+  <main>
+      <article class="checkout content">
+          <section class="order card card-block">
+              <h3>Your Order</h3>
+              <div class="order-h-title">Item</div><div class="order-h-price">Price</div>
+              <div class="order-img-col"><img src="https://placekitten.com/g/150/150" alt="" class="order-img"></div>
+              <div class="order-title-col">Product description...</div>
+              <div class="order-nr-col">1x</div>
+              <div class="order-price-col">$100.00</div>
+          </section>
+          <form action="" class="checkout-form">
+              <fieldset class="checkout-ship card card-block">
+                      <h3>Where do you want your order sent?</h3>
+                  <!-- Ship Name -->
+                  <label for="ship-name" class="form-group">
+                      <span class="ltxt">Name</span>
+                      <input type="text" class="form-control" id="ship-name"
+                              placeholder="Name" required autocomplete="name"
+                              title="Please fill out - your name.">
+                              </label>
+
+                  <!-- Ship Address -->
+                  <label for="ship-address" class="form-group">
+                      <span class="ltxt">Address</span>
+                      <input type="text" class="form-control" id="ship-address"
+                              placeholder="Address" required
+                              title="Please fill out – address.">
+                              </label>
+              </fieldset>
+              <fieldset class="checkout-pay card card-block">
+                  <h3>How would you like to pay?</h3>
+                  <p class="cc-warning">
+                      <em>Do not enter any actual credit card info!</em></p>
+                 <!-- CC Number -->
+                  <label for="cc-number" class="form-group cc-number-box">
+                      <span class="ltxt">Credit Card Number</span>
+                      <input type="number" class="form-control" id="cc-number"
+                              required placeholder="●●●● ●●●● ●●●● ●●●●"
+                              title="Please fill out - credit card number.">
+                              </label>
+                 <!-- CC Type -->
+                 <label for="cc-type" class="form-group cc-type-box">
+                     <span class="ltxt">Cred Card Type</span>
+                     <input type="text" class="form-control" id="cc-type"
+                             required placeholder="Card Type">
+                             </label>
+                <!-- CC Expiration MM-->
+                <label for="cc-mm" class="form-group cc-mm-box">
+                    <span class="ltxt">Expiration Month</span>
+                    <input type="number" class="form-control" id="cc-mm"
+                            placeholder="MM" required maxlength="2" max="12" min="1"
+                            title="Please fill out - expiration month.">
+                            </label>
+               <!-- CC Expiration YY-->
+               <label for="cc-yy" class="form-group cc-yy-box">
+                   <span class="ltxt">Expiration Year</span>
+                   <input type="number" class="form-control" id="cc-yy"
+                           placeholder="YYYY" required maxlength="4" max="9999" min="2016"
+                           title="Please fill out - expiration year.">
+                           </label>
+               <!-- CC Security Code     -->
+               <label for="cc-csc" class="form-group cc-csc-box">
+                   <span class="ltxt">Security Code</span>
+                   <input type="number" class="form-control" id="cc-csc" maxlength="3"
+                           required placeholder="CSC" min="0"
+                           title="Please fill out - security code, the last 3 numbers from the back ...">
+                           </label>
+               <!-- Different Billing Address -->
+               <input type="checkbox" class="form-group" id="diff-billing">
+               <label for="diff-billing" class="form-group">
+                    <span class="ltxt-diff-billing"><h6>Use a different billing address?</h6></span>
+
+                    </label>
+                <div class="new-billing fade-in">
+                        <!-- Billing Name -->
+                        <label for="billing-name" class="form-group">
+                            <span class="ltxt">Name</span>
+                            <input type="text" class="form-control" id="billing-name"
+                                autocomplete="name" placeholder="Name" maxlength="150">
+                                </label>
+                        <!-- Billing Address -->
+                        <label for="billing-address" class="form-group">
+                            <span class="ltxt">Billing Address</span>
+                            <input type="text" class="form-control" id="billing-address"
+                                placeholder="Address">
+                                </label>
+                    </div>
+              </fieldset>
+              <input type="submit" value="Place Order" class="btn btn-info">
+          </form>
+      </article>
+  </main>
+  <script src="scripts/main.js"></script>
+ </body>
+ </html>
