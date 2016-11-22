@@ -570,7 +570,7 @@ select.form-control-lg:not([size]):not([multiple]) {
 }
 .checkout {
   display: block;
-  margin: 8em auto;
+  margin: 8em auto 1em auto;
 }
 
 .header {
