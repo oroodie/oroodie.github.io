@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/\a css?family=Exo+2:200,400,600,800");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font: 200 1em/1.5em "Exo 2", "Helvetica Neue", Helvetica, sans-serif;
+  background: #fbfbfb;
+  color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font: 200 1.5em/1.5em "Exo 2", "Helvetica Neue", Helvetica, sans-serif;
+  color: #45b29d;
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 200;
+  padding-bottom: .8em;
+}
+
+.scene {
+  position: relative;
+  padding: 1.25em 0;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.scene:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media (min-width: 960px) {
+  .scene {
+    padding: 2.5em 0;
+  }
+}
+.scene > article {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.scene > article:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media (min-width: 960px) {
+  .scene > article {
+    max-width: 33em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .scene > article:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+body, html {
+  width: 100%;
+}
+
+.app {
+  width: 90%;
+  min-width: 18.125em;
+  text-align: center;
+  margin: 10% auto;
+}
+.app header, .app main {
+  width: 100%;
+}
+.app li, .app header {
+  display: block;
+  min-height: 4em;
+  height: 4em;
+  padding: 1em;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.app input[type=checkbox] {
+  position: absolute;
+  top: 2em;
+}
+.app .view-mode {
+  width: 100%;
+  padding-left: 2.5em;
+}
+.app .edit {
+  width: 100%;
+  margin-left: 1.5em;
+}
+.app .new-item {
+  margin-left: 1.5em;
+}
+.app label {
+  width: 80%;
+  word-wrap: break-word;
+}
+.app .remove {
+  display: inline-block;
+}
+
+@media (min-width: max-width) {
+  body {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 400px) {
+  .app {
+    max-width: 33em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .app:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  .app .view-mode {
+    padding-left: 4em;
+  }
+  .app .edit, .app .new-item {
+    margin-left: 2.5em;
+  }
+}
+.app {
+  position: relative;
+  background: #fff;
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 20px 50px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 20px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 20px 50px rgba(0, 0, 0, 0.1);
+  /*
+      .remove {
+          display: none;
+      }
+      li:hover .remove {
+          display: inline-block;
+      }
+  */
+}
+.app input:focus, .app button:focus {
+  outline: none;
+}
+.app input[type=text] {
+  border: none;
+  min-height: 1em;
+  padding: .2em;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+  font-weight: 200;
+  letter-spacing: .1em;
+  font-size: 1.5em;
+  width: 70%;
+}
+.app input[type=checkbox] {
+  vertical-align: middle;
+}
+.app .completed-state {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+.app .completed-state label {
+  text-decoration: line-through;
+}
+.app .remove {
+  background: none;
+  border: none;
+  text-indent: 30em;
+  width: 4em;
+  height: 3em;
+  overflow: hidden;
+  position: absolute;
+  right: 1.5em;
+  color: #df4848;
+}
+.app .remove:before {
+  content: 'x';
+  font-size: 1.7em;
+  position: absolute;
+  font-weight: bold;
+  left: .5em;
+  top: 0;
+  text-indent: 0;
+  text-transform: lowercase;
+}
+.app footer {
+  -moz-box-shadow: rgba(255, 255, 255, 0.8) 0 8px 0 -3px, rgba(0, 0, 0, 0.2) 0 9px 1px -3px, rgba(255, 255, 255, 0.8) 0 16px 0 -6px, rgba(0, 0, 0, 0.2) 0 17px 2px -6px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.8) 0 8px 0 -3px, rgba(0, 0, 0, 0.2) 0 9px 1px -3px, rgba(255, 255, 255, 0.8) 0 16px 0 -6px, rgba(0, 0, 0, 0.2) 0 17px 2px -6px;
+  box-shadow: rgba(255, 255, 255, 0.8) 0 8px 0 -3px, rgba(0, 0, 0, 0.2) 0 9px 1px -3px, rgba(255, 255, 255, 0.8) 0 16px 0 -6px, rgba(0, 0, 0, 0.2) 0 17px 2px -6px;
+}
+.app header:before {
+  content: ' ';
+  display: block;
+  height: .8em;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZTRhNiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2VmYzk0YyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7e4a6), color-stop(100%, #efc94c));
+  background: -moz-linear-gradient(top, #f7e4a6, #efc94c);
+  background: -webkit-linear-gradient(top, #f7e4a6, #efc94c);
+  background: linear-gradient(to bottom, #f7e4a6, #efc94c);
+}
+@media (min-width: 400px) {
+  .app h1 {
+    font-size: 3em;
+    white-space: nowrap;
+  }
+}
+.app li * {
+  display: inline-block;
+}
+.app li .edit {
+  display: none;
+}
+.app li.edit-mode .view-mode {
+  display: none;
+}
+.app li.edit-mode .edit {
+  display: inline-block;
+}
+.app .hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 200;
+  width: 100%;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.title {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.title:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.selected-filter {
+  border: 1px solid #45b29d;
+  color: #45b29d;
+  padding: .5em;
+  -moz-border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+  border-radius: 0.3em;
+}
+
+a {
+  color: #999;
+  margin: 0 .5em;
+  /* ovewrite browser state styles */
+  outline: none;
+  /* Webkit/Chrome - remove tap highlight color */
+  -webkit-tap-highlight-color: transparent;
+  /* Firefox gradient */
+  background-image: none;
+  /* long press > some devices, select text > bad UX */
+  /* do not, if usefull info - tel., mail etc. */
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+a:hover, a:active, a:focus {
+  color: #45b29d;
+}

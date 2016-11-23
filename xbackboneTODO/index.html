@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Backbone Do It</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+ <link rel="stylesheet" href="css/style.css">
+
+    <!--[if lt IE 9]>
+      <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header class="title">
+        <h1>Backbone Do It</h1>
+    </header>
+    <article class="app">
+        <header>
+            <input type="checkbox" class="toggle-all">
+            <input type="text" class="new-item" placeholder="Type to do ..." autofocus >
+        </header>
+        <main>
+            <ul class="list-items"></ul>
+        </main>
+        <footer class="statistics"></footer>
+    </article>
+
+<script type="text/template" id="item-tpl">
+       <input type="checkbox" class="completed" <%= completed ? 'checked' : '' %>>
+       <span class='view-mode <%= completed ? "completed-state":"" %>'>
+           <label for=""><%= title %></label>
+           <button class="remove">Remove</button>
+           </span>
+       <input type="text" class="edit" value="<%= title %>">
+</script>
+<script type="text/template" id="stats-tpl">
+       <span class="count-active"><%= active %> <%= active === 1 ? 'item':'items' %> to do.</span>
+       <ul class="filters">
+           <li>
+               <a href="#/" class="displayAll">All</a>
+               <a href="#/active" >Active</a>
+               <a href="#/completed" >Completed</a>
+           </li>
+       </ul>
+       <% if (completed) { %>
+       <button class="clear-completed-items">Clear Completed</button>
+       <% } %>
+</script>
+<body>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.16/backbone.localStorage-min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
