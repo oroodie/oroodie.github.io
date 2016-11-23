@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Backbone Do It</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+ <link rel="stylesheet" href="css/style.css">
+
+ <!--[if lt IE 9]>
+    <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body class="container">
+
+<header class="col-sm-12">Cat Clicker – OOJS MVVM Exercise</header>
+  <main>
+      <section class="row">
+          <div class="col-sm-8">
+              <!-- Current Item -->
+              <figure data-bind="with: currentItem">
+
+                  <figcaption>
+                      <h3 data-bind="text: $root.currentNameClicks"></h3>
+                      <h6 data-bind="foreach: nickname"> <span data-bind="text: $data "></span> </h6>
+                      <span data-bind="visible: level() > 0, text: 'Level '+ level()">level</span>
+                  </figcaption>
+                  <img data-bind="click: $root.incrementClick, attr: {src: srcMd, alt: name}"
+                       class="main-cat img-responsive" />
+              </figure>
+          </div>
+          <!-- List Items -->
+          <div class="col-sm-4" data-bind="foreach: items">
+              <figure class="col-3">
+                  <figcaption>
+                      <span data-bind="text: name"></span>
+                      <span data-bind="text: clicks"></span>
+                  </figcaption>
+                  <img data-bind="click: $parent.setCurrent.bind($data, $index()), attr:{ src: srcSm, alt: name }" class="img-responsive" />
+              </figure>
+          </div>
+      </section>
+  </main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
