@@ -14,19 +14,6 @@ html {
   color: #9f9f9f;
 }
 
-
-a, h3 {
-  display: block;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-weight: 200;
-  letter-spacing: 1px;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 .box {
   width: 100%;
 }
@@ -47,7 +34,7 @@ a:hover {
   width: 6em;
   height: 6em;
   position: relative;
-  margin: 5em 1em;
+  margin: 1em;
   display: inline-block;
 }
 
@@ -154,4 +141,12 @@ a:hover {
   background-image: linear-gradient(#eaeaea, #f6f6f6);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0, 0, 0, 0.1), 0 0 0 0.4em rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(0, 0, 0, 0.1), 0 0 0 0.4em rgba(0, 0, 0, 0.1);
+}
+
+a, h3 {
+  display: block;
+  text-decoration: underline;
+  font-family: sans-serif;
+  font-weight: 200;
+  letter-spacing: 1px;
 }
