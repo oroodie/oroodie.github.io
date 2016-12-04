@@ -1,0 +1,15 @@
+CACHE MANIFEST
+# version 3
+./css/style.css
+./js/bower_components/jquery/dist/jquery.js
+./js/bower_components/underscore/underscore.js
+./js/bower_components/backbone/backbone.js
+./js/bower_components/backbone.localStorage/backbone.localStorage.js
+./js/app.js
+https://fonts.gstatic.com/s/exo2/v3/RFCNDwJa8dM0kzqVeuqPjHYhjbSpvc47ee6xR_80Hnw.woff
+https://fonts.gstatic.com/s/exo2/v3/KzoFUeaQw_faskDsymvVJqCWcynf_cDxXwCLxiixG1c.woff
+https://fonts.gstatic.com/s/exo2/v3/4VH1sjauXOSoJIJOdxuAC3YhjbSpvc47ee6xR_80Hnw.woff2
+
+
+NETWORK:
+*
