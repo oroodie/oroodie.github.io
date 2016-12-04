@@ -1,11 +1,11 @@
 CACHE MANIFEST
 # version 3
 ./css/style.css
-./js/bower_components/jquery/dist/jquery.js
-./js/bower_components/underscore/underscore.js
-./js/bower_components/backbone/backbone.js
-./js/bower_components/backbone.localStorage/backbone.localStorage.js
 ./js/app.js
+https://code.jquery.com/jquery-3.1.0.js
+https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js
+https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js
+https://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.16/backbone.localStorage-min.js
 https://fonts.gstatic.com/s/exo2/v3/RFCNDwJa8dM0kzqVeuqPjHYhjbSpvc47ee6xR_80Hnw.woff
 https://fonts.gstatic.com/s/exo2/v3/KzoFUeaQw_faskDsymvVJqCWcynf_cDxXwCLxiixG1c.woff
 https://fonts.gstatic.com/s/exo2/v3/4VH1sjauXOSoJIJOdxuAC3YhjbSpvc47ee6xR_80Hnw.woff2
