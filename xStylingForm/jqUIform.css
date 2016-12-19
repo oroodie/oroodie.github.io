@@ -13,11 +13,11 @@ body {
 }
 
 html {
-    background-image:
+    background: #DEDFE3;
+    background:
     linear-gradient(#DEDFE3 2%, #AEB3B9 95%),
     radial-gradient(33% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
     background-blend-mode: screen;
-    overflow-y: scroll;
     min-height: 100%;
 }
 
@@ -166,10 +166,6 @@ input[type=checkbox],
 input[type=radio],
 .check-form-checkbox:not(#ie78),
 .check-form-radio:not(#ie78) {
-  padding: 0;
-  margin: 0;
-  top: 0;
-  left: 0;
   /* custom checkbox */
   position: absolute;
   /* left: -9999px; */
@@ -307,9 +303,7 @@ select::-ms-expand,
 
 select,
 .ui-button {
-  border: .1rem solid #999;
   background: none;
-  /* background: #bbb; */
   border: none;
   border-bottom: .1rem solid #555;
   margin: .5rem 0;
@@ -481,6 +475,7 @@ select:hover {
 
 /* 3-Blue Hour: */
 .blueHour {
+    background: #7E898F;
     background:
         linear-gradient(90deg, #7E898F 0%, #636C75 100%),
         radial-gradient(at top, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.55) 100%),
@@ -490,7 +485,8 @@ select:hover {
 
 /* 9-Full Moon: */
 .fullMoon {
-    background-image:
+    background: #DEDFE3;
+    background:
     linear-gradient(#DEDFE3 2%, #AEB3B9 95%),
     radial-gradient(33% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
     background-blend-mode: screen;

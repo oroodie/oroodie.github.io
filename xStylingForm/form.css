@@ -12,17 +12,12 @@ body { font-size: 16px; font-family: sans-serif; color: rgba(255,255,255, .8); l
 
 /* 9-Full Moon: */
 body, .fullMoon {
+    background: #636C75;
     background:
         linear-gradient(90deg, #7E898F 0%, #636C75 100%),
         radial-gradient(at top, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.55) 100%),
         radial-gradient(at top, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.08) 63%);
     background-blend-mode: multiply, screen;
-
-    /*background-image:
-    linear-gradient(#DEDFE3 2%, #AEB3B9 95%),
-    radial-gradient(33% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
-    background-blend-mode: screen;*/
-
 }
 
 main {
