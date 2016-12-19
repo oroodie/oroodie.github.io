@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Styling Forms</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" rel="stylesheet" type="text/css" />
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="jqUIform.css" type="text/css" />
+
+  <!-- <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" /> -->
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <!--[if lt IE 9]>
+    <style>
+      input[type=submit],
+      button {
+        border-radius: 0;
+        border-left: none;
+        box-shadow: none;
+      }
+    </style>
+  <![endif]-->
+</head>
+<body class="fullMoon">
+  <!-- <h1>Forms</h1> -->
+  <main>
+    <section class="search">
+
+      <!-- Style Search Form -->
+      <form class="search-form">
+        <input type="text" name="q" title="Type in your search term" placeholder="Search..." class="search-form-q">
+        <button type="submit" value="Go" class="search-form-submit">Go</button>
+      </form>
+
+    <!-- Check Udacity Accessibility -->
+    <!-- Style Radio / Checkbox -->
+      <form class="check-form">
+        <fieldset title="Food Favorites" role="group">
+          <h3>Food Favorites</h3>
+          <input type="checkbox" name="food" id="foodItalian" value="Italian"
+                 class="check-form-checkbox">
+          <label for="foodItalian" role="checkbox"
+                 role="checkbox" aria-checked="false" tabindex="0" id="Italian">Italian</label>
+          <input type="checkbox" name="food" id="foodMexican" value="Mexican"
+                 class="check-form-checkbox">
+          <label for="foodMexican"
+                 role="checkbox" aria-checked="false" tabindex="0" id="Mexican">Mexican</label>
+          <input type="checkbox" name="food" id="foodJapanese" value="Japanese"
+                 class="check-form-checkbox">
+          <label for="foodJapanese"
+                 role="checkbox" aria-checked="false" tabindex="0" id="Japanese">Japanese</label>
+          <input type="checkbox" name="food" id="foodFrench" value="French"
+                 class="check-form-checkbox">
+          <label for="foodFrench"
+                 role="checkbox" aria-checked="false" tabindex="0" id="French">French</label>
+        </fieldset>
+        <fieldset title="Rate from 1-5" role="group">
+          <h3>Rate from 1-5</h3>
+          <input type="radio" name="rating" id="rating1" value="1" class="check-form-radio">
+          <label for="rating1">1</label>
+          <input type="radio" name="rating" id="rating2" value="2" class="check-form-radio">
+          <label for="rating2">2</label>
+          <input type="radio" name="rating" id="rating3" value="3" class="check-form-radio">
+          <label for="rating3">3</label>
+          <input type="radio" name="rating" id="rating4" value="4" class="check-form-radio">
+          <label for="rating4">4</label>
+          <input type="radio" name="rating" id="rating5" value="5" class="check-form-radio">
+          <label for="rating5">5</label>
+        </fieldset>
+        <fieldset>
+          <label for="food"><h3>Spices</h3></label>
+          <select class="form-control" id="food">
+            <option>None...</option>
+            <option value="Cinnamon">Cinnamon</option>
+            <option value="Clove">Clove</option>
+            <option value="Ginger">Ginger</option>
+            <option value="Pepper">Black Pepper</option>
+          </select>
+        </fieldset>
+        </form>
+    </section>
+
+    </main>
+    <footer>
+    </footer>
+    <script type="text/javascript">
+        $(function(){
+
+            $('select').selectmenu();
+        });
+    </script>
+
+</body>
+</html>
