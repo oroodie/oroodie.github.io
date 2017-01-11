@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Menus</title>
+    <link rel="stylesheet" href="styles/flex-menus.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Flex Menus Demo</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+
+            <!-- Single Navigation -->
+            <section class="menu-section">
+            <h2>Single Navigation</h2>
+            <nav class="nav single-nav" role="navigation">
+                <ul class="single-nav-list">
+                    <li class="single-nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="single-nav-item"><a href="#" class="nav-link">Food</a></li>
+                    <li class="single-nav-item"><a href="#" class="nav-link">Classes</a></li>
+                    <li class="single-nav-item"><a href="#" class="nav-link">Recipes</a></li>
+                    <li class="single-nav-item"><a href="#" class="nav-link">News</a></li>
+                    <li class="single-nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="single-nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            </section>
+
+            <!-- Advanced Navigation -->
+            <section class="menu-section">
+                <h2>Advanced Navigation</h2>
+                <nav class="nav advanced-nav">
+                    <ul class="advanced-nav-list">
+                        <li class="advanced-nav-item"><a href="#" class="advanced-nav-link">
+                                <i class="fa fa-home nav-item-icon"></i>
+                                <div class="nav-btn-txt">Home
+                                <span class="nav-item-txt">Is where my heart is</span>
+                            </div>
+                            </a></li>
+                        <li class="advanced-nav-item"><a href="#" class="advanced-nav-link">
+                                <i class="fa fa-cutlery nav-item-icon"></i>
+                                <div class="nav-btn-txt">Food
+                                <span class="nav-item-txt">make it nourish the soul</span>
+                            </div>
+                            </a></li>
+                        <li class="advanced-nav-item"><a href="#" class="advanced-nav-link">
+                                <i class="fa fa-file-text nav-item-icon"></i>
+                                <div class="nav-btn-txt">Recipes
+                                <span class="nav-item-txt">guide you on your journey</span>
+                            </div>
+                            </a></li>
+                        <li class="advanced-nav-item"><a href="#" class="advanced-nav-link">
+                                <i class="fa fa-send nav-item-icon"></i>
+                                <div class="nav-btn-txt">News
+                                <span class="nav-item-txt">brings new wings</span>
+                            </div>
+                            </a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Multi Level Navigation -->
+            <section class="menu-section">
+                <h2>Multi Level Navigation</h2>
+                <nav class="nav multi-level-nav" role="navigation">
+                    <ul class="multi-level-nav-list">
+                        <li class="multi-level-nav-item"><a href="#" class="nav-link">Home</a></li>
+                        <li class="multi-level-nav-item has-children">
+                            <a href="#" class="nav-link">Food <button class="dropdown-toggle" role="navigation"></button>
+                            </a>
+                            <ul class="nav multi-level-sub-nav-list sub-menu">
+                                <li class="multi-level-nav-item"><a href="#" class="nav-link">Chef for Hire</a></li>
+                                <li class="multi-level-nav-item"><a href="#" class="nav-link">Catering</a></li>
+                                <li class="multi-level-nav-item"><a href="#" class="nav-link">Restaurant</a></li>
+                            </ul>
+                        </li>
+                        <li class="multi-level-nav-item"><a href="#" class="nav-link">Recipes</a></li>
+                        <li class="multi-level-nav-item has-children">
+                            <a href="#" class="nav-link">Classes <button class="dropdown-toggle" role="navigation"></button>
+                            </a>
+                            <ul class="nav multi-level-sub-nav-list sub-menu">
+                                <li class="multi-level-nav-item"><a href="#" class="nav-link">Registration</a></li>
+                                <li class="multi-level-nav-item"><a href="#" class="nav-link">Lunch Classes</a></li>
+                                <li class="multi-level-nav-item"><a href="#" class="nav-link">Fiesta Classes</a></li>
+                            </ul>
+                        </li>
+                        <li class="multi-level-nav-item"><a href="#" class="nav-link">News</a></li>
+                        <li class="multi-level-nav-item"><a href="#" class="nav-link">About</a></li>
+                        <li class="multi-level-nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Social Menu -->
+            <section class="menu-section">
+                <h2>Social Menu</h2>
+                <nav class="nav social-nav" role="navigation">
+                    <ul class="social-nav-list">
+                        <li class="social-nav-item"><a href="https://twitter.com" class="social-nav-link" title="Twitter">
+                            <span class="screen-reader-text">Twitter</span></a></li>
+                        <li class="social-nav-item"><a href="https://facebook.com" class="social-nav-link" title="Facebook">
+                            <span class="screen-reader-text">Facebook</span></a></li>
+                        <li class="social-nav-item"><a href="https://linkedin.com" class="social-nav-link" title="LinkedIn">
+                            <span class="screen-reader-text">LinkedIn</span></a></li>
+                        <li class="social-nav-item"><a href="https://youtube.com" class="social-nav-link" title="YouTube">
+                            <span class="screen-reader-text">YouTube</span></a></li>
+                        <li class="social-nav-item"><a href="https://instagram.com" class="social-nav-link" title="Instagram">
+                            <span class="screen-reader-text">Instagram</span></a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Mixed Menu -->
+            <section class="menu-section">
+                <h2>Mixed Menu</h2>
+                <section class="mixed-nav">
+                    <!-- Multi Level Menu -->
+                    <nav class="nav multi-level-nav" role="navigation">
+                        <ul class="multi-level-nav-list">
+                            <li class="multi-level-nav-item"><a href="#" class="nav-link">Home</a></li>
+                            <li class="multi-level-nav-item has-children">
+                                <a href="#" class="nav-link">Food <button class="dropdown-toggle" role="navigation"></button>
+                                </a>
+                                <ul class="nav multi-level-sub-nav-list sub-menu">
+                                    <li class="multi-level-nav-item"><a href="#" class="nav-link">Chef for Hire</a></li>
+                                    <li class="multi-level-nav-item"><a href="#" class="nav-link">Catering</a></li>
+                                    <li class="multi-level-nav-item"><a href="#" class="nav-link">Restaurant</a></li>
+                                </ul>
+                            </li>
+                            <li class="multi-level-nav-item"><a href="#" class="nav-link">Recipes</a></li>
+                            <li class="multi-level-nav-item has-children">
+                                <a href="#" class="nav-link">Classes <button class="dropdown-toggle" role="navigation"></button>
+                                </a>
+                                <ul class="nav multi-level-sub-nav-list sub-menu">
+                                    <li class="multi-level-nav-item"><a href="#" class="nav-link">Registration</a></li>
+                                    <li class="multi-level-nav-item"><a href="#" class="nav-link">Lunch Classes</a></li>
+                                    <li class="multi-level-nav-item"><a href="#" class="nav-link">Fiesta Classes</a></li>
+                                </ul>
+                            </li>
+                            <li class="multi-level-nav-item"><a href="#" class="nav-link">News</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- social menu -->
+                    <nav class="nav social-nav" role="navigation">
+                        <ul class="social-nav-list">
+                            <li class="social-nav-item"><a href="https://twitter.com" class="social-nav-link" title="Twitter">
+                                <span class="screen-reader-text">Twitter</span></a></li>
+                            <li class="social-nav-item"><a href="https://facebook.com" class="social-nav-link" title="Facebook">
+                                <span class="screen-reader-text">Facebook</span></a></li>
+                            <li class="social-nav-item"><a href="https://linkedin.com" class="social-nav-link" title="LinkedIn">
+                                <span class="screen-reader-text">LinkedIn</span></a></li>
+                            <li class="social-nav-item"><a href="https://youtube.com" class="social-nav-link" title="YouTube">
+                                <span class="screen-reader-text">YouTube</span></a></li>
+                            <li class="social-nav-item"><a href="https://instagram.com" class="social-nav-link" title="Instagram">
+                                <span class="screen-reader-text">Instagram</span></a></li>
+                        </ul>
+                    </nav>
+                </section> <!-- .mixed-nav -->
+            </section>
+
+        </div>
+    </main>
+    <script src="scripts/libs/jquery-2.1.3.min.js"></script>
+    <script src="scripts/libs/modernizr-flex.min.js"></script>
+    <script src="scripts/menu-toggle.js"></script>
+</body>
+</html>
