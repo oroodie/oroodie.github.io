@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox Layout</title>
+    <link rel="stylesheet" href="styles/flex-layout/main.css">
+</head>
+<body>
+    <a href="#content" class="skip-link screen-reader-text">Skip to content</a>
+
+    <div class="outer-wrap">
+        <!-- header -->
+        <header>
+            <div class="container">
+                <h1 class="site-title">Flexbox Layout Demo</h1>
+                <!-- sidebar-switcher -->
+                <section class="sidebar-switcher">
+                    Select layout:
+                    <a href="#" class="sidebar-left-toggle sidebar-switcher-link">
+                        <i class="fa fa-align-left"></i>
+                        <span class="screen-reader-text">Move sidebar to the left</span>
+                    </a>
+                    <a href="#" class="sidebar-right-toggle sidebar-switcher-link">
+                        <i class="fa fa-align-right"></i>
+                        <span class="screen-reader-text">Move sidebar to the right</span>
+                    </a>
+                    <a href="#" class="no-sidebar-toggle sidebar-switcher-link">
+                        <i class="fa fa-align-justify"></i>
+                        <span class="screen-reader-text">Display content vertically</span>
+                    </a>
+                    <a href="#" class="hide-sidebar-toggle sidebar-switcher-link">
+                        <i class="fa fa-arrow-circle-right"></i>
+                        <span class="screen-reader-text">Remove sidebar</span>
+                    </a>
+                </section>
+            </div> <!-- .contianer -->
+
+            <!-- main nav -->
+            <nav class="main-nav nav">
+                <section class="mixed-nav">
+                    <!-- Multi Level Menu -->
+                    <nav class="nav multi-level-nav" role="navigation">
+                        <ul class="multi-level-nav-list">
+                            <li class="multi-level-nav-item"><a href="#" class="nav-link">Home</a></li>
+                            <li class="multi-level-nav-item has-children">
+                                <a href="#" class="nav-link">Food <button class="dropdown-toggle" role="navigation"></button>
+                                </a>
+                                <ul class="nav multi-level-sub-nav-list sub-menu">
+                                    <li class="multi-level-nav-item"><a href="#" class="nav-link">Chef for Hire</a></li>
+                                    <li class="multi-level-nav-item"><a href="#" class="nav-link">Catering</a></li>
+                                    <li class="multi-level-nav-item"><a href="#" class="nav-link">Restaurant</a></li>
+                                </ul>
+                            </li>
+                            <li class="multi-level-nav-item"><a href="#" class="nav-link">Recipes</a></li>
+                            <li class="multi-level-nav-item has-children">
+                                <a href="#" class="nav-link">Classes <button class="dropdown-toggle" role="navigation"></button>
+                                </a>
+                                <ul class="nav multi-level-sub-nav-list sub-menu">
+                                    <li class="multi-level-nav-item"><a href="#" class="nav-link">Registration</a></li>
+                                    <li class="multi-level-nav-item"><a href="#" class="nav-link">Lunch Classes</a></li>
+                                    <li class="multi-level-nav-item"><a href="#" class="nav-link">Fiesta Classes</a></li>
+                                </ul>
+                            </li>
+                            <li class="multi-level-nav-item"><a href="#" class="nav-link">News</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- social menu -->
+                    <nav class="nav social-nav" role="navigation">
+                        <ul class="social-nav-list">
+                            <li class="social-nav-item"><a href="https://twitter.com" class="social-nav-link" title="Twitter">
+                                <span class="screen-reader-text">Twitter</span></a></li>
+                            <li class="social-nav-item"><a href="https://facebook.com" class="social-nav-link" title="Facebook">
+                                <span class="screen-reader-text">Facebook</span></a></li>
+                            <li class="social-nav-item"><a href="https://linkedin.com" class="social-nav-link" title="LinkedIn">
+                                <span class="screen-reader-text">LinkedIn</span></a></li>
+                            <li class="social-nav-item"><a href="https://youtube.com" class="social-nav-link" title="YouTube">
+                                <span class="screen-reader-text">YouTube</span></a></li>
+                            <li class="social-nav-item"><a href="https://instagram.com" class="social-nav-link" title="Instagram">
+                                <span class="screen-reader-text">Instagram</span></a></li>
+                        </ul>
+                    </nav>
+                </section> <!-- .mixed-nav -->
+            </nav>
+        </header>
+
+        <div class="content" id="content">
+            <!-- main -->
+            <main class="main-area">
+                <div class="main-container">
+                    <section class="cards">
+                        <article class="card"><a href="#" class="card-link">
+                                <figure class="card-figure"><img src="http://placekitten.com/300/150" alt="Card Image" class="card-img"></figure>
+                                <div class="card-content">
+                                    <h2 class="card-title">Lorem Ipsum Sit Amiet</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quaerat eum sed officiis, consequatur. Quas aspernatur animi.</p>
+                                </div>
+                            </a></article>
+                        <article class="card"><a href="#" class="card-link">
+                                <figure class="card-figure"><img src="http://placekitten.com/350/175" alt="Card Image" class="card-img"></figure>
+                                <div class="card-content">
+                                    <h2 class="card-title">Lorem Ipsum Sit Amiet</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quaerat eum sed officiis, consequatur. Quas aspernatur animi, non natus alias sequi velit, placeat tenetur suscipit ratione similique nam voluptatibus tempore!</p>
+                                </div>
+                            </a></article>
+                        <article class="card"><a href="#" class="card-link">
+                                <figure class="card-figure"><img src="http://placekitten.com/320/160" alt="Card Image" class="card-img"></figure>
+                                <div class="card-content">
+                                    <h2 class="card-title">Lorem Ipsum Sit Amiet</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quaerat eum sed officiis, consequatur. Quas aspernatur animi, non natus alias sequi velit, placeat tenetur suscipit ratione similique nam voluptatibus tempore! Quas aspernatur animi, non natus alias sequi velit, placeat tenetur suscipit ratione similique nam voluptatibus tempore!</p>
+                                </div>
+                            </a></article>
+
+                        <article class="card"><a href="#" class="card-link">
+                                <figure class="card-figure"><img src="http://placekitten.com/300/150" alt="Card Image" class="card-img"></figure>
+                                <div class="card-content">
+                                    <h2 class="card-title">Lorem Ipsum Sit Amiet</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quaerat eum sed officiis, consequatur. Quas aspernatur animi.</p>
+                                </div>
+                            </a></article>
+                        <article class="card"><a href="#" class="card-link">
+                                <figure class="card-figure"><img src="http://placekitten.com/350/175" alt="Card Image" class="card-img"></figure>
+                                <div class="card-content">
+                                    <h2 class="card-title">Lorem Ipsum Sit Amiet</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quaerat eum sed officiis, consequatur. Quas aspernatur animi, non natus alias sequi velit, placeat tenetur suscipit ratione similique nam voluptatibus tempore!</p>
+                                </div>
+                            </a></article>
+                        <article class="card"><a href="#" class="card-link">
+                                <figure class="card-figure"><img src="http://placekitten.com/320/160" alt="Card Image" class="card-img"></figure>
+                                <div class="card-content">
+                                    <h2 class="card-title">Lorem Ipsum Sit Amiet</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quaerat eum sed officiis, consequatur. Quas aspernatur animi, non natus alias sequi velit, placeat tenetur suscipit ratione similique nam voluptatibus tempore! Quas aspernatur animi, non natus alias sequi velit, placeat tenetur suscipit ratione similique nam voluptatibus tempore!</p>
+                                </div>
+                            </a></article>
+
+                        <article class="card"><a href="#" class="card-link">
+                                <figure class="card-figure"><img src="http://placekitten.com/300/150" alt="Card Image" class="card-img"></figure>
+                                <div class="card-content">
+                                    <h2 class="card-title">Lorem Ipsum Sit Amiet</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quaerat eum sed officiis, consequatur. Quas aspernatur animi.</p>
+                                </div>
+                            </a></article>
+                        <article class="card"><a href="#" class="card-link">
+                                <figure class="card-figure"><img src="http://placekitten.com/350/175" alt="Card Image" class="card-img"></figure>
+                                <div class="card-content">
+                                    <h2 class="card-title">Lorem Ipsum Sit Amiet</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quaerat eum sed officiis, consequatur. Quas aspernatur animi, non natus alias sequi velit, placeat tenetur suscipit ratione similique nam voluptatibus tempore!</p>
+                                </div>
+                            </a></article>
+                        <article class="card"><a href="#" class="card-link">
+                                <figure class="card-figure"><img src="http://placekitten.com/320/160" alt="Card Image" class="card-img"></figure>
+                                <div class="card-content">
+                                    <h2 class="card-title">Lorem Ipsum Sit Amiet</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quaerat eum sed officiis, consequatur. Quas aspernatur animi, non natus alias sequi velit, placeat tenetur suscipit ratione similique nam voluptatibus tempore! Quas aspernatur animi, non natus alias sequi velit, placeat tenetur suscipit ratione similique nam voluptatibus tempore!</p>
+                                </div>
+                            </a></article>
+
+                    </section>
+                </div> <!-- .contianer -->
+            </main>
+            <!-- aside -->
+            <aside class="aside">
+                <div class="aside-container">
+                    <h3>Explore the Demos</h3>
+                    <nav class="side-nav" role="navigation">
+                        <ul class="side-nav-list">
+                            <li class="side-nav-item"><a href="#" class="side-nav-link">Flexbox Menus</a></li>
+                            <li class="side-nav-item"><a href="#" class="side-nav-link">Card Layout</a></li>
+                            <li class="side-nav-item"><a href="#" class="side-nav-link">Holy Grail</a></li>
+                            <li class="side-nav-item"><a href="#" class="side-nav-link">All Together</a></li>
+                        </ul>
+                    </nav>
+                </div> <!-- .aside-contianer -->
+            </aside> <!-- .sidebar -->
+        </div> <!-- .content -->
+
+        <!-- footer -->
+        <footer class="footer-area">
+            <div class="container">
+                <p>The footer usually appears on the bottom of the page. That's why it's called the "footer".</p>
+            </div> <!-- .contianer -->
+        </footer>
+    </div> <!-- .outer-wrap -->
+
+    <script src="scripts/libs/modernizr-flex.min.js"></script>
+    <script src="scripts/libs/jquery-2.1.3.min.js"></script>
+    <script src="scripts/flex-layout-switch.js"></script>
+    <script src="scripts/menu-toggle.js"></script>
+</body>
+</html>
