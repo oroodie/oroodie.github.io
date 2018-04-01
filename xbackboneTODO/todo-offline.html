@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>TITLE</title>
-    <meta name="description" content="DESCRIPTION">
+    <title>Backbone Do It</title>
+    <meta name="description" content="Backbone App">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 
    <link rel="stylesheet" href="css/style.css">
@@ -15,21 +15,29 @@
 </head>
 <body>
     <header class="title">
-        <h1>Backbone Do It</h1>
+        <h1>Backbone Do It List</h1>
     </header>
-    <article class="app">
-        <header>
-            <input type="checkbox" class="toggle-all">
-            <input type="text" class="new-item" placeholder="Type to do ..." autofocus >
-        </header>
-        <main>
-            <ul class="list-items"></ul>
-        </main>
-        <footer class="statistics"></footer>
-    </article>
+    <main>
+        <article class="app">
+            <header>
+                <label for="toggle-all" class="sr-only">Toggle All</label>
+                <input type="checkbox" class="toggle-all" id="toggle-all">
+                <label for="type-todo" class="sr-only">Type a to do item</label>
+                <input type="text" class="new-item" placeholder="Type to do ..." id="type-todo" autofocus >
+            </header>
+            <main>
+                <h3 class="sr-only">List of Items</h3>
+                <ul class="list-items"></ul>
+            </main>
+            <footer class="statistics">
+                <h3 class="sr-only">Statistics</h3>
+            </footer>
+        </article>
+    </main>
 
 <script type="text/template" id="item-tpl">
-       <input type="checkbox" class="completed" <%= completed ? 'checked' : '' %>>
+       <label for="completed" class="sr-only">Check as completed</label>
+       <input type="checkbox" class="completed" id="completed" <%= completed ? 'checked' : '' %>>
        <span class='view-mode <%= completed ? "completed-state":"" %>'>
            <label for=""><%= title %></label>
            <button class="remove">Remove</button>
@@ -40,9 +48,9 @@
        <span class="count-active"><%= active %> <%= active === 1 ? 'item':'items' %> to do.</span>
        <ul class="filters">
            <li>
-               <a href="#/" class="displayAll">All</a>
-               <a href="#/active" >Active</a>
-               <a href="#/completed" >Completed</a>
+               <a href="#/" class="displayAll" role="button">All</a>
+               <a href="#/active" role="button">Active</a>
+               <a href="#/completed" role="button">Completed</a>
            </li>
        </ul>
        <% if (completed) { %>

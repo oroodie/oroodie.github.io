@@ -1,4 +1,5 @@
 /* ----------- 3D SLIDER ----------- */
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -10,6 +11,24 @@
   font-family: sans-serif;
   font-weight: 200;
   letter-spacing: .02rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/*
+Photorealistic Gradients
+https://github.com/evankarageorgos/hue
+*/
+body, .silverSurfer {
+    background-image: linear-gradient(to bottom, #BCBCBC 0%, #D9D9D9 26%, #EFEFEF 49%, #E0E0E0 74%, #D3D3D3 100%),
+    linear-gradient(to bottom, #BCBCBC 0%, #D9D9D9 26%, #EFEFEF 49%, #E0E0E0 74%, #D3D3D3 100%),
+    linear-gradient(to bottom, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 150%),
+    radial-gradient(50% 59%, rgba(255,255,255,0.30) 66%, rgba(0,0,0,0.30) 200%);
+    background-blend-mode: multiply,multiply,screen;
 }
 
 header, main, article, section, footer {
@@ -233,4 +252,47 @@ header, main, footer {
 
 .slider3d-perspective {
   display: inline-block;
+}
+
+/* vertical centering */
+.main {
+    position: absolute;
+    width: 100%;
+    max-width: none !important;
+    top: 30%;
+    transform: translateY(-30%);
+    -webkit-transform: translateY(-30%);
+    -moz-transform: translateY(-30%);
+    -o-transform: translateY(-30%);
+    -ms-transform: translateY(-30%);
+    transform: translateY(-30%);
+}
+
+/*
+ * Fix 100vh: https://gist.github.com/pburtchaell/e702f441ba9b3f76f587
+ * iPad with portrait orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+  body {
+    height: 1024px;
+  }
+}
+
+/**
+ * iPad with landscape orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+  body {
+    height: 768px;
+  }
+}
+
+/**
+ * iPhone 5
+ * You can also target devices with aspect ratio.
+ */
+@media screen and (device-aspect-ratio: 40/71) {
+  body {
+    height: 500px;
+  }
 }

@@ -28,6 +28,40 @@ header h1 {
   line-height: 5rem;
 }
 
+/*
+Only display content to screen readers
+See: http://a11yproject.com/posts/how-to-hide-content
+*/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/*
+Use in conjunction with .sr-only to only display content when it's focused.
+Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+Credit: HTML5 Boilerplate
+*/
+
+.sr-only-focusable {
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
 .container {
   width: 100%;
   max-width: 60rem;
@@ -77,6 +111,8 @@ header h1 {
 }
 
 /* ------- Advanced Nav ------ */
+/*****************************/
+
 .advanced-nav {
   text-align: left;
   color: #ccc;
@@ -103,6 +139,8 @@ header h1 {
 }
 
 /* ------- Multi Level Nav ------ */
+/**********************************/
+
 .has-children,
 .sub-menu,
 .multi-level-nav-list,
@@ -176,6 +214,8 @@ header h1 {
 }
 
 /* ------- Single Nav ------ */
+/*****************************/
+
 @media (min-width: 30rem) {
   .single-nav-list {
     display: -webkit-box;
@@ -246,7 +286,10 @@ header h1 {
     display: flex;
   }
 }
+
 /* ------- Multi Level Nav ------ */
+/*****************************/
+
 @media (min-width: 30rem) {
   .multi-level-nav-list {
     display: -webkit-box;
@@ -282,7 +325,10 @@ header h1 {
     padding-left: 1rem;
   }
 }
+
 /* ------- Social Nav ------ */
+/*****************************/
+
 .social-nav-link:before {
   content: "";
   font-family: "Fontawesome";
@@ -331,6 +377,8 @@ header h1 {
 }
 
 /* ------- Mixed Nav ------ */
+/*****************************/
+
 .mixed-nav .multi-level-nav {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;

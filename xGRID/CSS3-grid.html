@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Grid Gallery</title>
+    <style type="text/css">
+
+    body {
+        margin: 0;
+        padding: 2rem;
+        background: #1f1f1f;
+        font-weight: 300;
+        font-family: sans-serif;
+    }
+    h1 {
+        color: rgba(0,0,0, .1);
+        font-weight: 300;
+        padding: 2rem;
+        position: absolute;
+    }
+
+    .grid-gallery {
+      display: grid;
+      grid-template-areas: "gridi-1 gridi-2 gridi-2" "gridi-1 gridi-3 gridi-4" "gridi-5 gridi-5 gridi-4";
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 10px;
+      height: 400px;
+      width: 400px;
+      margin: 110px auto;
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+    }
+
+    .grid-gallery > * {
+      background-color: #007a95;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background-size: cover;
+    }
+
+    .grid-gallery-item-1 {
+      grid-area: gridi-1;
+      background: url("https://picsum.photos/g/400/600/?random") no-repeat;
+    }
+
+    .grid-gallery-item-2 {
+      grid-area: gridi-2;
+      background: url("https://picsum.photos/g/500/600/?random") no-repeat;
+    }
+
+    .grid-gallery-item-3 {
+      grid-area: gridi-3;
+      background: url("https://picsum.photos/g/300/300/?random") no-repeat;
+    }
+
+    .grid-gallery-item-4 {
+      grid-area: gridi-4;
+      background: url("https://picsum.photos/g/500/500/?random") no-repeat;
+    }
+
+    .grid-gallery-item-5 {
+      grid-area: gridi-5;
+      background: url("https://picsum.photos/g/600/300/?random") no-repeat;
+    }
+
+    @media screen and (min-width: 600px) {
+      .grid-gallery {
+        width: 600px;
+        height: 600px;
+      }
+    }
+
+    </style>
+</head>
+<body>
+    <h1 class="sr-only">CSS3 Grid Gallery</h1>
+    <min>
+        <article class="grid-gallery">
+          <div class="grid-gallery-item-1"></div>
+          <div class="grid-gallery-item-2"></div>
+          <div class="grid-gallery-item-3"></div>
+          <div class="grid-gallery-item-4"></div>
+          <div class="grid-gallery-item-5"></div>
+        </article>
+    </min>
+</body>
+</html>

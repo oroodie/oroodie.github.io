@@ -8,6 +8,21 @@
     font-weight: 200;
 }
 
+/*
+Only display content to screen readers
+See: http://a11yproject.com/posts/how-to-hide-content
+*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 body { font-size: 16px; font-family: sans-serif; color: rgba(255,255,255, .8); letter-spacing: .01rem; }
 
 /* 9-Full Moon: */

@@ -239,27 +239,27 @@ body {
   list-style: decimal;
 }
 
-h1, .h1, h1 {
+h1, .h1 {
   margin: 1em 0 0.5em;
 }
 
-h2, .h2, h2 {
+h2, .h2 {
   margin: 1em 0 0.5em;
 }
 
-h3, .h3, h3 {
+h3, .h3 {
+  margin: 0.5em 0 0.5em;
+}
+
+h4, .h4 {
   margin: 1em 0 0.5em;
 }
 
-h4, .h4, h4 {
+h5, .h5 {
   margin: 1em 0 0.5em;
 }
 
-h5, .h5, h5 {
-  margin: 1em 0 0.5em;
-}
-
-h6, .h6, h6 {
+h6, .h6 {
   margin: 1em 0 0.5em;
 }
 
@@ -485,13 +485,6 @@ Menus
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
-}
-
-.screen-reader-text {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
 }
 
 .has-children {
@@ -799,13 +792,14 @@ footer {
   background-color: #404040;
   color: #ccc;
   padding: 1rem 0 6rem;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
 Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers */
-.screen-reader-text {
+.sr-only {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
   height: 1px;
@@ -813,9 +807,9 @@ Accessibility
   overflow: hidden;
 }
 
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus {
+.sr-only:hover,
+.sr-only:active,
+.sr-only:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
   -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -860,7 +854,7 @@ Flex Cards
 --------------------------------------------------------------*/
 .card-img {
   width: 100%;
-  opacity: .7;
+  opacity: .8;
   display: block;
 }
 
@@ -900,6 +894,8 @@ h2, h3, h4, h5, h6 {
   background: #fff;
   color: #777;
   margin-top: 2rem;
+  border-radius: 3px;
+  overflow: hidden;
   -webkit-box-shadow: 0 0 .5rem #ddd;
           box-shadow: 0 0 .5rem #ddd;
 }

@@ -1,0 +1,859 @@
+@charset "UTF-8";
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  color: #999;
+  font-family: sans-serif;
+  font-weight: 200;
+  letter-spacing: .02rem;
+}
+
+header, article, section, footer {
+  display: block;
+  clear: both;
+}
+
+header, main, footer {
+  width: 100%;
+  max-width: 33rem;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1em;
+  margin-top: 0;
+}
+
+/*
+
+  Transitions
+
+> Animate CSS properties over a specified time;
+
+> Applys to initial state
+
+> Trigger States
+    :hover, :focus, :active,
+    :target, :checked, :disabled  (form elms)
+
+> What can be transitioned (animated)
+  https://www.w3.org/TR/css3-transitions/#animatable-css
+  http://caniuse.com/#search=transition
+
+> -webkit-, -moz-, -o-, -ms-transition
+
+> MIN – 2 prop.:
+  a {
+      background: orange;
+      transition-property: background;
+      transition-duration: .5s;
+  }
+  a {
+    background: blue;
+  }
+
+
+*/
+a {
+  background: #ccc;
+  color: #fff;
+  padding: .7em;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: .1rem;
+  margin-bottom: .2rem;
+  /* transition */
+  -webkit-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: .5s;
+       -o-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+a:hover, a:focus {
+  background: #02b3e4;
+  text-decoration: underline;
+}
+
+/*
+
+  Transform
+
+> Transform elms rendered by CSS, in 2D, 3D space;
+
+> Add (w,h): display: inline-block;
+
+> trnsform: function( param );   // syntax
+
+> Move – along axes (X,Y)
+  > transform: translate(10px, 10px);
+               translateX(10px);
+               translateY(10px);
+> Scale – along axes (X,Y) = (width, height)
+  > transform: scale(.5, .5);
+               scaleX(.5);     // half
+               scaleY(2);      // twice
+> Rotate – to any degree;
+  > transform: rotate(90deg);
+
+> Skew – along axes (X,Y)
+  > transform: skewX(-25deg);
+               skewY(10deg);
+
+> Set ORIGIN POINT – along axes (X,Y)
+  > transform-origin: 50% 50%; // default
+    transform-origin: 10px 0;  // 10px,% right offset
+    transform-origin: left bottom;
+
+*/
+a.translate {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform, -o-transform;
+  -webkit-transition-duration: .8s;
+       -o-transition-duration: .8s;
+          transition-duration: .8s;
+}
+
+a.translate:hover,
+a.translate:focus {
+  -webkit-transform: translateY(2rem);
+      -ms-transform: translateY(2rem);
+       -o-transform: translateY(2rem);
+          transform: translateY(2rem);
+}
+
+a.scale {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform, -o-transform;
+  -webkit-transition-duration: .8s;
+       -o-transition-duration: .8s;
+          transition-duration: .8s;
+}
+
+a.scale:hover,
+a.scale:focus {
+  -webkit-transform: scale(1.25);
+      -ms-transform: scale(1.25);
+       -o-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+a.skew {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform, -o-transform;
+  -webkit-transition-duration: .8s;
+       -o-transition-duration: .8s;
+          transition-duration: .8s;
+}
+
+a.skew:hover,
+a.skew:focus {
+  -webkit-transform: skewY(-25deg);
+      -ms-transform: skewY(-25deg);
+       -o-transform: skewY(-25deg);
+          transform: skewY(-25deg);
+}
+
+a.origin {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform, -o-transform;
+  -webkit-transition-duration: .8s;
+       -o-transition-duration: .8s;
+          transition-duration: .8s;
+  -webkit-transform-origin: left bottom;
+      -ms-transform-origin: left bottom;
+       -o-transform-origin: left bottom;
+          transform-origin: left bottom;
+}
+
+a.origin:hover,
+a.origin:focus {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+/*
+
+  3D (X,Y,Z)
+
+> For container
+> Focal length (photo) - close, far away.
+> perspective: 500px;    // 200 - 1000  mid-range
+               1500px;   // very far away
+               150px;    // very close
+
+> Vanishing Point
+> perspective-origin: 50% 50%;   // center, default
+                      50% 100%;  // center bottom
+                      0% 100%;   // left bottom
+
+> transform: translate3d( 10px, 10px, -10px );
+             translateZ( -10px );
+
+             scale3d( 1.5, .5, .75 );
+             scaleZ( .75 );
+
+             rotate3d(10,10,10deg);
+             rotateZ( 10deg );
+
+> Determine how child elements are treated in 3D space;
+
+  transform-style: preserve-3d; // default
+                   flat; // maps child elms on parent
+
+*/
+.box3d {
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+a.translate3d {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform, -o-transform;
+  -webkit-transition-duration: .8s;
+       -o-transition-duration: .8s;
+          transition-duration: .8s;
+}
+
+a.translate3d:hover,
+a.translate3d:focus {
+  -webkit-transform: translate3d(5px, 5px, 5px);
+          transform: translate3d(5px, 5px, 5px);
+}
+
+a.scale3d {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform, -o-transform;
+  -webkit-transition-duration: .8s;
+       -o-transition-duration: .8s;
+          transition-duration: .8s;
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
+}
+
+a.scale3d:hover,
+a.scale3d:focus {
+  -webkit-transform: scale3d(1.25, 0.75, 0.75);
+          transform: scale3d(1.25, 0.75, 0.75);
+}
+
+a.rotate3d {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform, -o-transform;
+  -webkit-transition-duration: .8s;
+       -o-transition-duration: .8s;
+          transition-duration: .8s;
+}
+
+a.rotate3d:hover,
+a.rotate3d:focus {
+  -webkit-transform: rotate3d(1, 1, 1, 360deg);
+          transform: rotate3d(1, 1, 1, 360deg);
+}
+
+/* -------------- GALLERY -------------- */
+.gallery, .gobig {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-left: -.5em;
+  /* justify-content: center; */
+}
+
+.gallery-item, .gobig-item {
+  display: inline-block;
+  text-align: center;
+  margin: .5em;
+  width: 180px;
+  height: 180px;
+  position: relative;
+  /* transition */
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.gallery-item:hover,
+.gallery-item:focus {
+  /* transform */
+  -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+       -o-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  /* fix for older browser */
+  -webkit-backface-visibility: hidden;
+}
+
+.gallery-caption {
+  position: absolute;
+  background: #888;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 200;
+  padding: .4rem 0;
+  margin: 1rem 0;
+  display: block;
+  width: 100%;
+  opacity: .8;
+  /* ttransition */
+  -webkit-transition: opacity .5s ease;
+  -o-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.gallery-item:hover .gallery-caption,
+.gallery-item:focus .gallery-caption {
+  opacity: 0;
+}
+
+.gallery-img {
+  width: 180px;
+}
+
+/* -------------- SPIN logo -------------- */
+.logo {
+  position: relative;
+  width: 3rem;
+  display: inline-block;
+  /* set 3d perspective */
+  -webkit-perspective: 61.250rem;
+          perspective: 61.250rem;
+}
+
+.logo-deco:hover {
+  /* set rotation */
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.rotate {
+  /* set rotation */
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.logo-deco {
+  width: 3rem;
+  height: 7rem;
+  background-color: #777;
+  position: relative;
+  /* set transition */
+  /* cubic-bezier(.795,.035,.95,.05); */
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  -o-transition: -o-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease, -o-transform 1s ease;
+  -webkit-transition-delay: .01s;
+       -o-transition-delay: .01s;
+          transition-delay: .01s;
+}
+
+.logo-text {
+  position: absolute;
+  bottom: 0rem;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  /* style | variant | weight | size/line-height | family */
+  font: 4rem/4rem serif;
+}
+
+.logo-text-small {
+  font-size: .5rem;
+  color: #fff;
+}
+
+/* -------------- SPIN Wheels -------------- */
+.wheels {
+  display: inline-block;
+  position: relative;
+}
+
+.wheels-item {
+  width: 4rem;
+  height: 4rem;
+  background: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  line-height: 5rem;
+  font: 6.5rem/4rem serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+.wheels-item {
+  position: relative;
+  left: 62rem;
+  opacity: 0;
+  /* transition */
+  -webkit-transition: all 3s;
+  -o-transition: all 3s;
+  transition: all 3s;
+}
+
+.spin-wheel {
+  /* transformations */
+  -webkit-transform: rotate(-1080deg);
+      -ms-transform: rotate(-1080deg);
+       -o-transform: rotate(-1080deg);
+          transform: rotate(-1080deg);
+  opacity: 1;
+  left: 0;
+}
+
+/* -------------- Font-size -------------- */
+/*
+> Scale text - some browsers render it fuzzy
+             – treated as img;
+*/
+.terms-of-use {
+  font-size: .5rem;
+  /* transition */
+  -webkit-transition: font-size .5s ease;
+  -o-transition: font-size .5s ease;
+  transition: font-size .5s ease;
+}
+
+.terms-of-use:hover {
+  font-size: 1rem;
+}
+
+footer {
+  margin: 2rem;
+}
+
+/* -------------- ANIMATIONS -------------- */
+/*
+
+@keyframes myAnimation {
+
+  0% { color: black; }
+  50% { color: red; }
+  100% { color: black; }
+}
+
+@keyframes yourAnimation {
+
+  from { color: black; }
+  to { color: red; }
+}
+
+.animatedDiv {
+  animation: myAnimation 1s infinite alternate;
+}
+  animation:
+  <animName> <duration> <iteration <count> <direction>;
+
+  animation-name             // @keyframe
+  animation-duration         // .5s, 500ms
+  animation-iteration-count  // 1,2,3,... <infinite>
+  animation-direction        // <normal>, <alternate>
+  animation-timing-function  // <=> transitions
+  animation-delay            // 1s, 1000ms
+
+*/
+@-webkit-keyframes animateBg {
+  0% {
+    background-color: #444;
+  }
+  30% {
+    background-color: #777;
+  }
+  60% {
+    background-color: #999;
+  }
+  100% {
+    background-color: #444;
+  }
+}
+@-o-keyframes animateBg {
+  0% {
+    background-color: #444;
+  }
+  30% {
+    background-color: #777;
+  }
+  60% {
+    background-color: #999;
+  }
+  100% {
+    background-color: #444;
+  }
+}
+@keyframes animateBg {
+  0% {
+    background-color: #444;
+  }
+  30% {
+    background-color: #777;
+  }
+  60% {
+    background-color: #999;
+  }
+  100% {
+    background-color: #444;
+  }
+}
+.logo-deco {
+  -webkit-animation: animateBg 4s infinite;
+       -o-animation: animateBg 4s infinite;
+          animation: animateBg 4s infinite;
+}
+
+/* ----------- ANIMATION – 3D Gallery ----------- */
+@-webkit-keyframes goBig {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(10, 10, 10);
+            transform: scale3d(10, 10, 10);
+  }
+}
+@-o-keyframes goBig {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(10, 10, 10);
+  }
+}
+@keyframes goBig {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(10, 10, 10);
+            transform: scale3d(10, 10, 10);
+  }
+}
+.animate-goBig, .gobig-item:hover {
+  /* call animation */
+  -webkit-animation: goBig 1.5s ease-in;
+       -o-animation: goBig 1.5s ease-in;
+          animation: goBig 1.5s ease-in;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  z-index: 10;
+}
+
+.perspective {
+  -webkit-perspective: 1000;
+          perspective: 1000;
+}
+
+/* deco */
+.gobig {
+  position: relative;
+}
+
+.gobig-item {
+  /* position: absolute; */
+  display: inline-block;
+  margin: .5em;
+}
+
+.gobig-item:first-of-type {
+  /* position: relative; */
+}
+
+.gobig-item-caption {
+  position: absolute;
+}
+
+.gobig-item-img {
+  width: 180px;
+}
+
+/* ----------- ANIMATION – Flip Gallery ----------- */
+.flip-gallery-item {
+  /* Childs in 3D space */
+  -webkit-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.flip .flip-gallery-item,
+.flip .flip-gallery-caption {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.flip .flip-gallery-img {
+  opacity: 0;
+}
+
+.flip-gallery-img {
+  /* backface-visibility: hidden; */
+}
+
+/* Deco box,
+   On flip image,
+   it keeps same area for mouseenter and mouseleave
+   thus avoid flicker, when are of flipped item is smaller;
+*/
+.flip-box {
+  display: inline-block;
+  margin: .5rem;
+  -webkit-perspective: 50rem;
+          perspective: 50rem;
+}
+
+/* deco */
+.flip-gallery-item {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: inline-block;
+  margin: 0;
+  overflow: hidden;
+}
+
+.flip-gallery-caption,
+.flip-gallery-img {
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+.flip-gallery-img {
+  width: 180px;
+}
+
+.flip-gallery-caption {
+  background: #fff;
+  font-size: .8rem;
+  padding: .3rem;
+}
+
+/* ----------- 3D CUBE ----------- */
+.cube-perspective {
+  -webkit-perspective: 62.5rem;
+          perspective: 62.5rem;
+  /*1000px*/
+}
+
+.cube {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s, -o-transform 1s;
+  -webkit-animation: rotate3Dcube 9s infinite alternate;
+       -o-animation: rotate3Dcube 9s infinite alternate;
+          animation: rotate3Dcube 9s infinite alternate;
+}
+
+.front {
+  -webkit-transform: translateZ(8.5rem);
+          transform: translateZ(8.5rem);
+}
+
+.back {
+  -webkit-transform: translateZ(-8.5rem);
+          transform: translateZ(-8.5rem);
+}
+
+.right {
+  -webkit-transform: translateX(8.5rem) rotateY(90deg);
+          transform: translateX(8.5rem) rotateY(90deg);
+}
+
+.left {
+  -webkit-transform: translateX(-8.5rem) rotateY(-90deg);
+          transform: translateX(-8.5rem) rotateY(-90deg);
+}
+
+.top {
+  -webkit-transform: translateY(-8.5rem) rotateX(90deg);
+          transform: translateY(-8.5rem) rotateX(90deg);
+}
+
+.bottom {
+  -webkit-transform: translateY(8.5rem) rotateX(-90deg);
+          transform: translateY(8.5rem) rotateX(-90deg);
+}
+
+.cube {
+  -webkit-transform: rotateX(15deg) rotateY(-35deg);
+          transform: rotateX(15deg) rotateY(-35deg);
+}
+
+.show-front {
+  -webkit-transform: rotateX(15deg) rotateY(-35deg);
+          transform: rotateX(15deg) rotateY(-35deg);
+}
+
+.show-back {
+  -webkit-transform: rotateX(-15deg) rotateY(-215deg) translateX(-4.5rem);
+          transform: rotateX(-15deg) rotateY(-215deg) translateX(-4.5rem);
+}
+
+.show-right {
+  -webkit-transform: rotateY(-125deg) rotateX(-15deg);
+          transform: rotateY(-125deg) rotateX(-15deg);
+}
+
+.show-left {
+  -webkit-transform: rotateY(55deg) rotateX(-15deg);
+          transform: rotateY(55deg) rotateX(-15deg);
+}
+
+.show-top {
+  -webkit-transform: rotateY(-35deg) rotateX(-75deg);
+          transform: rotateY(-35deg) rotateX(-75deg);
+}
+
+.show-bottom, .show-front {
+  -webkit-transform: rotateX(105deg) rotateY(-5deg) rotateZ(25deg);
+          transform: rotateX(105deg) rotateY(-5deg) rotateZ(25deg);
+}
+
+@-webkit-keyframes rotate3Dcube {
+  0% {
+    -webkit-transform: rotateX(15deg) rotateY(-35deg);
+            transform: rotateX(15deg) rotateY(-35deg);
+  }
+  20% {
+    -webkit-transform: rotateX(-15deg) rotateY(-215deg) translateX(-4.5rem);
+            transform: rotateX(-15deg) rotateY(-215deg) translateX(-4.5rem);
+  }
+  40% {
+    -webkit-transform: rotateY(-125deg) rotateX(-15deg);
+            transform: rotateY(-125deg) rotateX(-15deg);
+  }
+  60% {
+    -webkit-transform: rotateY(55deg) rotateX(-15deg);
+            transform: rotateY(55deg) rotateX(-15deg);
+  }
+  80% {
+    -webkit-transform: rotateX(105deg) rotateY(-5deg) rotateZ(25deg);
+            transform: rotateX(105deg) rotateY(-5deg) rotateZ(25deg);
+  }
+  100% {
+    -webkit-transform: rotateY(-35deg) rotateX(-75deg);
+            transform: rotateY(-35deg) rotateX(-75deg);
+  }
+}
+
+@-o-keyframes rotate3Dcube {
+  0% {
+    transform: rotateX(15deg) rotateY(-35deg);
+  }
+  20% {
+    transform: rotateX(-15deg) rotateY(-215deg) translateX(-4.5rem);
+  }
+  40% {
+    transform: rotateY(-125deg) rotateX(-15deg);
+  }
+  60% {
+    transform: rotateY(55deg) rotateX(-15deg);
+  }
+  80% {
+    transform: rotateX(105deg) rotateY(-5deg) rotateZ(25deg);
+  }
+  100% {
+    transform: rotateY(-35deg) rotateX(-75deg);
+  }
+}
+
+@keyframes rotate3Dcube {
+  0% {
+    -webkit-transform: rotateX(15deg) rotateY(-35deg);
+            transform: rotateX(15deg) rotateY(-35deg);
+  }
+  20% {
+    -webkit-transform: rotateX(-15deg) rotateY(-215deg) translateX(-4.5rem);
+            transform: rotateX(-15deg) rotateY(-215deg) translateX(-4.5rem);
+  }
+  40% {
+    -webkit-transform: rotateY(-125deg) rotateX(-15deg);
+            transform: rotateY(-125deg) rotateX(-15deg);
+  }
+  60% {
+    -webkit-transform: rotateY(55deg) rotateX(-15deg);
+            transform: rotateY(55deg) rotateX(-15deg);
+  }
+  80% {
+    -webkit-transform: rotateX(105deg) rotateY(-5deg) rotateZ(25deg);
+            transform: rotateX(105deg) rotateY(-5deg) rotateZ(25deg);
+  }
+  100% {
+    -webkit-transform: rotateY(-35deg) rotateX(-75deg);
+            transform: rotateY(-35deg) rotateX(-75deg);
+  }
+}
+/* deco */
+.cube-perspective {
+  width: 17rem;
+  height: 17rem;
+  position: relative;
+  margin: 0 auto 2rem;
+}
+
+.cube-img {
+  width: 17rem;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.cube-side {
+  position: absolute;
+  display: block;
+  width: 17rem;
+  height: 17rem;
+  border: 0.01rem solid rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  opacity: .7;
+}

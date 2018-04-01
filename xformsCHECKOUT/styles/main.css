@@ -1,4 +1,20 @@
-@import url("https://fonts.googleapis.com/css?family=Exo+2:200,400,600,800");
+@import url("https://fonts.googleapis.com/css?family=Exo+2:400,800");
+
+/*
+Only display content to screen readers
+See: http://a11yproject.com/posts/how-to-hide-content
+*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 .form-control {
   display: block;
   width: 100%;
@@ -699,6 +715,10 @@ body {
   margin: 0 !important;
 }
 
+.order {
+  text-align: center;
+}
+
 .order-img {
   border-radius: 50%;
   border-radius: 50%;
@@ -706,10 +726,6 @@ body {
 
 [class*="order-h-"] {
   display: none;
-}
-
-.order {
-  text-align: center;
 }
 
 @media (min-width: 450px) {
@@ -722,9 +738,6 @@ body {
   }
 
   .order-h-title {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 37.5%;
     float: left;
     padding-left: 1.25%;
@@ -734,9 +747,6 @@ body {
   }
 
   .order-h-price {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 25%;
     float: left;
     padding-left: 1.25%;
@@ -746,19 +756,15 @@ body {
   }
 
   .order-img-col {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 25%;
     float: left;
     padding-left: 1.25%;
     padding-right: 1.25%;
+    position: relative;
+    top: -20px;
   }
 
   .order-title-col {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 37.5%;
     float: left;
     padding-left: 1.25%;
@@ -766,9 +772,6 @@ body {
   }
 
   .order-nr-col {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 12.5%;
     float: left;
     padding-left: 1.25%;
@@ -776,9 +779,6 @@ body {
   }
 
   .order-price-col {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     width: 25%;
     float: left;
     padding-left: 1.25%;
